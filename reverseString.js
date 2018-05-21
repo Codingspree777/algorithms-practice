@@ -1,3 +1,0 @@
-function reverseString(){
-    console.log();
-}
