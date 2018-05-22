@@ -9,7 +9,7 @@ function palindromes(str) {
     }
     if(mystr === lowerstr) {
       return true;
-    } else if (mystr !== lowerstr) { 
+    } else { 
       return false;
     }
 }
