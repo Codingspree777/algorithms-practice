@@ -15,11 +15,30 @@ function situQuiz(arr) {
      modeObj[arr[j]] += 1;
     }
     console.log(mean)
-    console.log(modeObj)
-  
-  
+  console.log(modeObj)
+
+  let count = 0;
+  let mode;
+  for(let prop in modeObj) {
+    if(modeObj[prop] === count) {
+      count = modeObj[prop];
+      mode = parseInt(prop);
+    }
+    else if(modeObj[prop] > count) {
+      count = modeObj[prop];
+      mode = parseInt(prop);
+    }
   }
+  console.log(mode);
+
+  if(mean === mode) {
+    return true 
+  } else 
+    return false
+}
+
+
+situQuiz([2,2,4,8,4,4]);
   
   
-  situQuiz([14,18,15,18,22,15,14,22,0,15,15]);
   
