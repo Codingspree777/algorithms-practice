@@ -12,3 +12,20 @@
 // fib(1) is 1
 // fib(n) is fib(n - 1) + fib(n - 2)
 // Write a function called fib that accepts a number n as a parameter and computes the nth fibonacci number using the above rules.
+
+function fib(num) {
+    let a = 1;
+    let b = 1;
+    let c = 1;
+  
+    while(num>1) {
+      c = a + b;
+      a = b;
+      b = c;
+      num--;
+    }
+    console.log(c)
+  
+  }
+   
+  fib(2);
