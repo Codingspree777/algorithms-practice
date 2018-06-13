@@ -1,17 +1,16 @@
 function union(arrayOfArrays){
-    //Flat array arguments, then process to reduce data
-    return [].concat.apply([], arrayOfArrays).reduce(function(result, current){
-      //If my result array doesn't get current element
-      return result.indexOf(current) === -1
-      //concat current element to result and return it
-      ? result.concat(current)
-      //Otherwise, just return actual result array
-      : result;
-    }, []);
-  }
-
-
-
+ let aSet = new Set();
+ 
+ for(let i = 0; i < arrayOfArrays.length; i++){
+   let subarr = arrayOfArrays[i]
+    for(let j = 0; j < subarr.length; j++){
+      if(aSet !== subarr[j]){
+        aSet.add(subarr[j])
+      }
+    }
+ }
+  return Array.from(aSet)
+}
 
 var arr1 = [5, 10, 15];
 var arr2 = [15, 88, 1, 5, 7];
