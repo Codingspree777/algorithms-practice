@@ -1,14 +1,13 @@
 const union = (arrayOfArrays) => {
- let aSet = new Set()
-  
-  let firstarr = arrayOfArrays.reduce((reduce, arr) =>{
-    return reduce.concat(arr);
-  }, []).reduce((output, curr, i)=>{
-    if(!aSet.has(curr)) {
-      aSet.add(curr)
+  const noDupeSet = arrayOfArrays.reduce((concatarr, arr) =>{
+    return concatarr.concat(arr);
+  }, []).reduce((mySet, num)=>{
+    if(!mySet.has(num)) {
+      mySet.add(num)
     }
+    return mySet
   }, new Set())
-  return Array.from(aSet)
+  return Array.from(NoDupeSet)
 }
 
 var arr1 = [5, 10, 15];
