@@ -20,11 +20,6 @@ const highestProductof2 = (array) =>{
     } 
     i++;
   }
-
-     console.log(secondhighest)
-     console.log(highest)
-     console.log(secondlowest)
-     console.log(lowest)
    
   let firstset = highest * secondhighest
   let secondset = lowest * secondlowest
