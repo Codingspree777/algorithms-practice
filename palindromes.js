@@ -13,3 +13,4 @@ function palindromes(str) {
       return false;
     }
 }
+//test
